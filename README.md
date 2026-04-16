@@ -20,8 +20,9 @@ Opening PDF Document: summary_report.pdf by Acme Corp (30 pages)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Solution Approach
-    Prototype Pattern: Concrete document classes (Pdf, Text, Spreadsheet) implement a clone() method using super.clone(). This allows the creation of new objects without re-executing the constructor logic.
 
-    Registry Management: The DocumentRegistry class maintains private, final instances of each document type. These are initialized immediately upon registry creation to output the "Creating..." messages.
+Prototype Pattern: Concrete document classes (Pdf, Text, Spreadsheet) implement a clone() method using super.clone(). This allows the creation of new objects without re-executing the constructor logic.
 
-    Encapsulation: Document properties are updated post-cloning via a setProperties method, allowing the cloned document to represent specific file data while retaining the base prototype structure.
+Registry Management: The DocumentRegistry class maintains private, final instances of each document type. These are initialized immediately upon registry creation to output the "Creating..." messages.
+
+Encapsulation: Document properties are updated post-cloning via a setProperties method, allowing the cloned document to represent specific file data while retaining the base prototype structure.
